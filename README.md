@@ -45,7 +45,7 @@ Given a layout like this:
 
 Outputs this:
 
-![Holy grail layout](https://github.com/ajdelossantos/holy-grail-css-template/holy-grail.png "Holy grail layout")
+![Holy grail layout](https://github.com/ajdelossantos/holy-grail-css-template/blob/master/holy-grail.png "Holy grail layout")
 
 Implemented in grid with flexbox fallbacks.
 
