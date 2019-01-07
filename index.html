@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Holy Grail Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+  <!-- <script src="main.js"></script> -->
+</head>
+
+<body>
+  <div id="main" class="app__layout">
+
+    <header>
+      <div class="header__logo">
+        <h2>LOGO</h2>
+      </div>
+      <div class="header__title"><h1>Header</h1></div>
+      <nav class="header__nav">
+          <ul>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <article class="main__content">
+        <h2>Content Title</h2>
+        <!-- <p>Lorum ipsum here.</p> -->
+      </article>
+      <aside class="main__aside">
+
+      </aside>
+    </main>
+
+    <footer>Footer</footer>
+
+  </div>
+</body>
+
+<style>
+
+/*
+\========================================
+\ Presentational CSS
+\========================================
+*/
+
+  nav > ul,
+  nav > li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .app__layout,
+  header,
+  main,
+  footer {
+    border: 1px dashed red;
+    padding: 5px;
+  }
+
+  .app__layout{
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1140px;
+    height: 100%;
+    min-height: 50vh;
+  }
+
+  header,
+  footer {
+    min-height: 100px;
+  }
+
+  header > * {
+    border: 1px dashed blue;
+  }
+
+  .header__logo,
+  .header__title,
+  .header__nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__logo,
+  .header__title {
+    text-align: center;
+  }
+
+  .header__nav > ul {
+    /* Flex is the better tool here in all cases */
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  nav > ul > li {
+    padding: 2px 4px;
+  }
+
+  main > * {
+    border: 1px dashed indigo;
+  }
+
+  main {
+    min-height: 900px;
+    height: 100%;
+  }
+
+/*
+\========================================
+\ Flexbox
+\========================================
+*/
+
+  .app__layout,
+  header,
+  main,
+  footer {
+    display: flex;
+  }
+
+  .app__layout{
+    flex-direction: column;
+  }
+
+  header,
+  main,
+  footer {
+    flex-direction: row;
+  }
+
+  .header__logo {
+    flex: 1;
+  }
+
+  .header__title {
+    flex: 2;
+  }
+
+  .header__nav {
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+  }
+
+  .main__content {
+    flex: 3;
+  }
+
+  .main__aside {
+    flex: 1;
+  }
+
+/*
+\========================================
+\ Grid
+\========================================
+*/
+
+  .app__layout,
+  header,
+  main,
+  footer {
+    display: grid;
+  }
+
+  .app__layout {
+
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+  }
+
+  header {
+    grid-area: header;
+
+    grid-template-areas:
+    "logo title title nav"
+  }
+
+  .header__logo {
+    grid-area: logo;
+  }
+
+  .header__title {
+    grid-area: title;
+  }
+
+  .header__nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: content;
+
+    grid-template-areas:
+    "content content content aside"
+  }
+
+  .main__content {
+    grid-area: content;
+  }
+
+  .main__aside {
+    grid-area: aside;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+
+</style>
+
+</html>
