@@ -1,10 +1,10 @@
 # Holy Grail CSS Template
 
-Provide grid and flexbox holy-grail layout. See the style tag for code.
+Provide grid and flexbox holy-grail layout.
 
 ## Example
 
-_NB: See the style tag in the index file for details_
+_NB: See ```main.css``` for the code_
 
 Given a layout like this:
 
